@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="my-10 text-center">
-        <p>Copyright © {year} - All right reserved by ACME Industries Ltd</p>
+        <p>Copyright © {year} - All right reserved</p>
       </div>
     </footer>
   );
