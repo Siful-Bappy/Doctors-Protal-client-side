@@ -1,13 +1,12 @@
 import React from "react";
 
 const Service = ({ service }) => {
-    const { name, slots } = service;
-    const num = 10;
-    console.log(num);
-    return (
-        <div class="card lg:max-w-lg bg-base-100 shadow-xl">
+  const { name, slots } = service;
+    console.log(service);
+  return (
+    <div class="card lg:max-w-lg bg-base-100 shadow-xl">
             <div class="card-body text-center">
-                <h2 class="text-xl font-bold text-secondary">{name}</h2>
+                <h2 class="text-xl font-bold text-secondary">{name} nakdfew</h2>
                 <p>{
                     slots.length > 0
                         ? <span>{slots[0]}</span>
