@@ -20,7 +20,7 @@ const AvailableAppointment = ({date}) => {
       </h4>
       <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5'>
         {
-          services.map(service => <Service
+          services?.map(service => <Service
               key={service._id}
               service={service}
               setTreatment={setTreatment}
