@@ -2,7 +2,6 @@ import React from "react";
 
 const Service = ({ service }) => {
   const { name, slots } = service;
-    // console.log(slots);
   return (
     <div className="card lg:max-w-lg bg-base-100 shadow-xl">
             <div className="card-body text-center">
