@@ -5,12 +5,22 @@ import auth from "../../firebase.init";
 
 const BookingModal = ({ treatment, date, setTreatment }) => {
   const [user, loading, error] = useAuthState(auth);
-  console.log(user);
+  // console.log(user);
   const { _id, name, slots } = treatment;
+  const formatttedDate = format(date, "PP");
   const handleBooking = (event) => {
     const slot = event.target.slot.value;
-    setTreatment(null);
+    const booking = {
+      treatmentId: _id,
+      treatment: name,
+      date: formatttedDate,
+      slot,
+      patient: user.email,
+      patientName: user.displayName,
+      phone: event.target.phone.value,
+    }
     event.preventDefault();
+    setTreatment(null);
   };
   return (
     <div>
@@ -43,18 +53,21 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
             </select>
             <input
               type="name"
+              name="name"
               value={user?.displayName || ""}
               disabled
               className="input w-full max-w-xs"
             />
             <input
               type="email"
+              name="email"
               disabled
               value={user?.email || ""}
               className="input w-full max-w-xs"
             />
             <input
               type="text"
+              name="phone"
               placeholder="Phone Number"
               className="input w-full max-w-xs"
             />
