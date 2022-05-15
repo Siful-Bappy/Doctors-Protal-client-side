@@ -8,6 +8,8 @@ import Login from "./Pages/Login/Login/Login";
 import Appointment from "./Pages/Appointment/Appointment";
 import SignUp from "./Pages/Login/Login/SignUp";
 import RequireAuth from "./Pages/Login/Login/RequireAuth";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
           </RequireAuth>
         } />
       </Routes>
+      <ToastContainer />
     </div>
   );
 }
