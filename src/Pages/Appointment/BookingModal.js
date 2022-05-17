@@ -30,9 +30,14 @@ const BookingModal = ({ treatment, date, setTreatment }) => {
     .then(res => res.json())
     .then(data => {
       console.log(data)
+      if(data.success) {
+        toast(`Appointment is set, ${formatttedDate} at ${slot}`)
+      } else {
+        toast.error(`Already have an appointment on ${data.booking?.date} at ${data.booking?.slot}`)
+        
+      }
       setTreatment(null);
     })
-
     event.preventDefault();
   };
   return (
