@@ -14,9 +14,9 @@ const {data: services, isLoading, refetch} = useQuery(["available", formattedDat
   fetch(`http://localhost:5000/service?date=${formattedDate}`).then(res => res.json())
 })
 
-if(isLoading) {
-  return <Loading></Loading>
-}
+// if(isLoading) {
+//   return <Loading></Loading>
+// }
 
   // useEffect(() => {
   //   fetch(`http://localhost:5000/service?date=${formattedDate}`)
